@@ -1,0 +1,124 @@
+<!-- HTML File for the Scientific Calculator Project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Setting a calculator icon on the title tab -->
+    <link rel="icon" href="Calculator_icon.ico">
+
+    <title>My Calculator!</title>
+
+    <!-- To attach the css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- To attach the JS file -->
+    <script src="script.js" defer></script>
+
+    <!-- To add icons to the page -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <div class="main-container">
+        <!-- The display screen of the calculator. Here 'readonly' has been given as to not allow 
+             the user to alter the text/calculations. -->
+        <div class="display">
+            <input readonly id="screen_display" type="text" placeholder="0">
+        </div>
+
+        <!-- Using span tag to particularly change the style of that element by using that tag. -->
+        <div class="my-buttons">
+            <div class="row btn-left">
+                <button onclick=""><span> DEG </span></button>
+                <button onclick=""><span> F-E </span></button>
+            </div>
+
+            <!-- Altering the style of the elements using inline styling. -->
+            <div class="row">
+                <button onclick="m_clear()" style="font-size: x-small;"> MC </button>
+                <button onclick="" style="font-size: x-small;"> MS </button>
+                <button onclick="m_plus()"><span> M+ </span></button>
+                <button onclick="m_minus()"><span> M- </span></button>
+                <button onclick="final_mrc_calculation()"><span> MRC </span></button>
+            </div>
+
+            <!-- Using various symbols such as &#9727(Right Triangle), &#402(Function), &#960()pi
+                 &#8730(square root), etc. -->
+            <div class="row btn-trigo-func">
+                <button onclick=""> &#9727 Trigonometry <i class="fas fa-angle-down"></i></button>
+                <button onclick=""> &#402 Function <i class="fas fa-angle-down"></i></button>
+            </div>
+
+            <!-- Using functions from the JS file to perform various actions. -->
+            <!-- 1st row for calculation -->
+            <div class="row">
+                <button onclick="allClear()" style="background-color: brown;"> AC </button>
+                <button onclick="pi()"> &#960 </button>
+                <button onclick="e()"> e </button>
+                <button onclick="sin()"> sin </button>
+                <button onclick="backspace()"><i class="fas fa-backspace"></i></button>
+            </div>
+
+            <!-- 2nd row for calculation -->
+            <div class="row">
+                <button onclick="squares()"> x<sup>2</sup> </button>
+                <button onclick="inverse()"> 1/x </button>
+                <button onclick="absolute()"> |x| </button>
+                <button onclick="cos()"> cos </button>
+                <button onclick="tan()"> tan </button> 
+            </div>
+
+            <!-- 3rd row for calculation -->
+            <div class="row"> 
+                <button onclick="squareRoot()"> &#8730x </button>
+                <button class="btn"> ( </button>
+                <button class="btn"> ) </button>
+                <button onclick="factorial()"> n! </button>
+                <button class="btn"> / </button>
+            </div>
+
+            <!-- 4th row for calculation -->
+            <div class="row">
+                <button onclick="power()"> x<sup>y</sup></button>
+                <button class="btn"><span> 7 </span></button>
+                <button class="btn"><span> 8 </span></button>
+                <button class="btn"><span> 9 </span></button>
+                <button class="btn">x</button>
+            </div>
+
+            <!-- 5th row for calculation -->
+            <div class="row">
+                <button onclick="raiseToTen()">10<sup>x</sup></button>
+                <button class="btn"><span> 4 </span></button>
+                <button class="btn"><span> 5 </span></button>
+                <button class="btn"><span> 6 </span></button>
+                <button class="btn">-</button>
+            </div> 
+
+            <!-- 6th row for calculation -->
+            <div class="row">
+                <button onclick="logarithm()">log</button>
+                <button class="btn"><span> 1 </span></button>
+                <button class="btn"><span> 2 </span></button>
+                <button class="btn"><span>    3 </span></button>
+                <button class="btn">+</button>
+            </div>
+
+            <!-- 7th row for calculation -->
+            <div class="row">
+                <button onclick="naturalLog()">ln</button>
+                <button class="btn">+/-</button>
+                <button class="btn"><span> 0 </span></button>
+                <button class="btn">.</button>
+                <button onclick="equals()">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
